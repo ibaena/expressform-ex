@@ -7,7 +7,8 @@ function myLoggingMiddleware(req, res, next){
   var url = req.url;
   var method = req.method;
 
-  console.log('%s request at %s', url, method);
+  console.log('%s request at %s', method, url);
+  next();
 }
 
 // This is the bodyParser middleware
